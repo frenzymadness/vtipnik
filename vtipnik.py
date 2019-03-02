@@ -8,7 +8,7 @@ def nacti_vtip(cesta_ke_vtipu):
     tak vrátí text vtipu jako řetězec.
     """
     try:
-        with open(cesta_ke_vtipu, 'r') as f:
+        with open(cesta_ke_vtipu, 'r', encoding="utf-8") as f:
             return f.read()
     except FileNotFoundError:
         sys.exit('Bohuzel soubor s vtipem neexistuje: {}'.format(cesta_ke_vtipu))
