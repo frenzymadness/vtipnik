@@ -5,8 +5,7 @@
 Program napsaný v jazyku Python sloužící k zobrazování vtipů ze složky. 
 
 ## Instalace
-
-Netuším, napíšte autorovi @frenzymadness
+Není potřebná, skript je jednoduše spustitelný.
 
 ## Příspěvky
 Oceníme jakoukoliv finanční částku na účet **123 456 789 / 9999**.
