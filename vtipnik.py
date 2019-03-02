@@ -21,6 +21,13 @@ def seznam_vtipu():
     return glob("vtipy/*")
 
 
-for vtip in seznam_vtipu():
-    print("=" * 80)
-    print(nacti_vtip(vtip))
+def main():
+    """
+    Vypíše všechny nalezené vtipy.
+    """
+    for vtip in seznam_vtipu():
+        print("=" * 80)
+        print(nacti_vtip(vtip))
+
+if __name__ == "__main__":
+    main()
