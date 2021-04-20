@@ -1,5 +1,6 @@
 import sys
-from glob import glob
+import glob
+import random
 
 
 def nacti_vtip(cesta_ke_vtipu):
@@ -18,16 +19,24 @@ def seznam_vtipu():
     """
     Funkce načtě obsah složky a vrátí seznam všech dostupných vtipů
     """
-    return glob("vtipy/*")
+    return glob.glob("vtipy/*")
 
 
 def main():
     """
-    Vypíše všechny nalezené vtipy.
+    Vypíše jeden náhodný vtip ze seznamu a po stisknutí Enteru vypíše další
     """
-    for vtip in seznam_vtipu():
-        print("=" * 80)
-        print(nacti_vtip(vtip))
+    ls_vtip=seznam_vtipu()
+    for x in range(len(ls_vtip)):
+       print("=" * 80) 
+       vtip=random.choice(ls_vtip)
+       print(nacti_vtip(vtip))
+       ls_vtip.remove(vtip)
+       if len(ls_vtip)==0:
+           print('\n\nBohuzel jsi uz vsechny vtipy videl\n')
+           break
+        
+       input("\nStisni Enter pro dalsi vtip\n")
 
 if __name__ == "__main__":
     main()
