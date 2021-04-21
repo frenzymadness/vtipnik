@@ -1,5 +1,5 @@
 import sys
-import glob
+from glob import glob
 import random
 
 
@@ -19,7 +19,7 @@ def seznam_vtipu():
     """
     Funkce načtě obsah složky a vrátí seznam všech dostupných vtipů
     """
-    return glob.glob("vtipy/*")
+    return glob("vtipy/*")
 
 
 def main():
