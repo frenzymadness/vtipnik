@@ -9,7 +9,7 @@ def nacti_vtip(cesta_ke_vtipu):
     tak vrátí text vtipu jako řetězec.
     """
     try:
-        with open(cesta_ke_vtipu, 'r', encoding = "utf-8") as f:
+        with open(cesta_ke_vtipu, 'r', encoding="utf-8") as f:
             return f.read()
     except FileNotFoundError:
         sys.exit('Bohuzel soubor s vtipem neexistuje: {}'.format(cesta_ke_vtipu))
@@ -27,7 +27,7 @@ def main():
     Vypíše jeden náhodný vtip ze seznamu a po stisknutí Enteru vypíše další
     """
     list_vtipu = seznam_vtipu()
-    while len(list_vtipu)>0:
+    while list_vtipu:
        print("=" * 80) 
        vtip = random.choice(list_vtipu)
        print(nacti_vtip(vtip))
