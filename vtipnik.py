@@ -1,5 +1,6 @@
 import sys
 from glob import glob
+import random
 
 
 def nacti_vtip(cesta_ke_vtipu):
@@ -23,11 +24,16 @@ def seznam_vtipu():
 
 def main():
     """
-    Vypíše všechny nalezené vtipy.
+    Vypíše jeden náhodný vtip ze seznamu a po stisknutí Enteru vypíše další
     """
-    for vtip in seznam_vtipu():
-        print("=" * 80)
-        print(nacti_vtip(vtip))
-
+    list_vtipu = seznam_vtipu()
+    while list_vtipu:
+       print("=" * 80) 
+       vtip = random.choice(list_vtipu)
+       print(nacti_vtip(vtip))
+       list_vtipu.remove(vtip)
+       input("\nStiskni Enter pro dalsi vtip\n")
+    print('\n\nBohuzel jsi uz vsechny vtipy videl\n')
+        
 if __name__ == "__main__":
     main()
