@@ -34,6 +34,7 @@ def main():
        list_vtipu.remove(vtip)
        input("\nStiskni Enter pro dalsi vtip\n")
     print('\n\nBohuzel jsi uz vsechny vtipy videl\n')
-        
+    input("\nStiskni Enter pro ukonceni programu\n")
+    
 if __name__ == "__main__":
     main()
