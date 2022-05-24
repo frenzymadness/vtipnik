@@ -1,0 +1,11 @@
+void pohadka() {
+  if (princ.sila >= drak.sila) {
+    drak.delete;
+    princ+=princezna+kralovstvi/2;
+  } else {
+    princ-=hlava;
+    drak.hmotnost+=princezna.hmotnost;
+    kral.status="Smutny";
+    kralovstvi.goto("Prdel");
+  }
+}
